@@ -24,8 +24,18 @@ body{
 }
 .fas{
     font-size: 25px;
+    color: #b1b1b1;    
+}
+
+.icon-notifiche{
+    text-align: center;    
+}
+
+.color-text-gray{
     color: #b1b1b1;
 }
+
+
 
 /* —————————————— Flex alignments —————————————— */
 .d-flex{display: flex;}
@@ -58,6 +68,8 @@ body{
 /* —————————————— Margins —————————————— */
 .m-10{margin:10px;}
 
+.ml-10{margin-left:10px;}
+
 .mr-5{margin-right:5px;}
 
 
@@ -84,7 +96,19 @@ body{
 .notifiche{
     height: 100px;
     width: 100%;
-    background-color: rgb(24, 221, 129);
+    background-color: #8edafc;
+}
+
+.fa-bell-slash{
+    color: #8edafc;
+    background-color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+}
+.text-notifiche > p{
+    text-decoration: underline;
 }
 
 .search{
