@@ -10,8 +10,99 @@ body{
 }
 
 .container{
-    margin: 5vh auto;
+    margin: 5% auto;
     width: 75%;
-    height: 90vh;
-    background-color: black;
+    height: 700px;
+    background-color: #eae8ea;
+    border-radius: 5px;
+}
+
+/* —————————————— Common —————————————— */
+.avatar-img{
+    width: 50px;
+    border-radius: 50%;
+}
+.fas{
+    font-size: 25px;
+    color: #b1b1b1;
+}
+
+/* —————————————— Flex alignments —————————————— */
+.d-flex{display: flex;}
+
+.flex-center{align-items: center; justify-content: center;}
+
+.justify-start{justify-content: flex-start;}
+.justify-end{justify-content: flex-end;}
+.justify-center{justify-content: center;}
+.justify-between{justify-content: space-between;}
+
+.align-start{align-items: flex-start;}
+.align-end{align-items: flex-end;}
+.align-center{align-items: center;}
+
+.align-content-start{align-content: flex-start;}
+.align-content-end{align-content: flex-end;}
+.align-content-center{align-content: center;}
+.align-content-between{align-content: space-between;}
+
+/* —————————————— Float —————————————— */
+.clearfix::after{content:''; display: table; clear: both;}
+.f-left{float: left;}
+.f-right{float: right;}
+
+/* —————————————— Paddings —————————————— */
+.p-10{padding:10px;} .p-15{padding:15px;} .p-20{padding:20px;} .p-25{padding:25px;}
+.p-30{padding:30px;} .p-35{padding:35px;} .p-40{padding:40px;} .p-14{padding: 14px;}
+
+/* —————————————— Margins —————————————— */
+.m-10{margin:10px;}
+
+.mr-5{margin-right:5px;}
+
+
+/* --- SEZIONE PRINCIPALE --- */
+
+/* sezione sx */
+.contenitor-sx{
+    height: 100%;
+    width: 34%;
+    background-color: brown;
+    box-sizing: border-box;
+}
+.user-box{
+    height: 80px;
+    width: 100%;
+    background-color: cadetblue;
+}
+
+.user-item{
+    width: 50%;
+    background-color: chartreuse;
+}
+
+.notifiche{
+    height: 100px;
+    width: 100%;
+    background-color: rgb(24, 221, 129);
+}
+
+.search{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(126, 24, 221);
+}
+.contatti-list{
+    height: 470px;
+    width: 100%;
+    /* overflow-y: hidden; */
+    background-color: rgb(56, 51, 61);
+}
+
+/* sezione dx */
+.contenitor-dx{
+    float: right;
+    height: 100%;
+    width: 66%;
+    background-color: rgb(144, 190, 90);
 }
