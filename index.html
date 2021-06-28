@@ -23,16 +23,16 @@
                     <h3 class="">Nome Utente</h3>
                 </div>
                 <div class="header-icon p-14 d-flex align-center justify-end">
-                    <i class="fas fa-circle-notch m-10"></i>
-                    <i class="fas fa-comment-alt m-10"></i>
-                    <i class="fas fa-ellipsis-v m-10"></i>
+                    <i class="fas fa-circle-notch m-10 icone-grigio-chiaro"></i>
+                    <i class="fas fa-comment-alt m-10 icone-grigio-chiaro"></i>
+                    <i class="fas fa-ellipsis-v m-10 icone-grigio-chiaro"></i>
                 </div>
             </div>
 
             <!-- sezione notifiche -->
             <div class="notifiche p-10 d-flex align-center">
-                <div class="icon-notifiche text-center">
-                    <i class="fas fa-bell-slash"></i>
+                <div class="icon-notifiche ">
+                    <i class="fas fa-bell-slash p-10"></i>
                 </div>
                 <div class="ml-10 text-notifiche">
                     <h3 class="">Ricevi notifiche di nuovi messaggi</h3>
@@ -43,7 +43,7 @@
             <!-- sezione search -->
             <div class="search d-flex align-center">
                 <div class="icon-search pl-10" >
-                    <button class="border-none"><i class="fas fa-search"></i></button>
+                    <button class="border-none btn-colonna-sx"><i class="fas fa-search icone-grigio-chiaro"></i></button>
                 </div>      
                 <div class="input-search pr-10">
                     <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="" class="area-input">
@@ -51,28 +51,28 @@
             </div>
 
             <!-- sezione contatti -->
-            <div class="contatti-list p-10"> 
-                <div class="p-10 d-flex ">
+            <div class="contatti-list"> 
+                <div class="p-15 contact-item d-flex ">
                     <img class="avatar-img mr-5" src="img/avatar_2.jpg" alt="">
                     <h4 class="ml-5">Michele</h4>
-                </div>
-                <hr>
-                <div class="p-10 d-flex ">
+                </div>                
+                <div class="contact-hr"></div>
+                <div class="p-15 contact-item d-flex ">
                     <img class="avatar-img mr-5" src="img/avatar_3.jpg" alt="">
                     <h4 class="ml-5">Francesco</h4>
                 </div>
-                <hr>
-                <div class="p-10 d-flex ">
+                <div class="contact-hr"></div>
+                <div class="p-15 contact-item d-flex ">
                     <img class="avatar-img mr-5" src="img/avatar_4.jpg" alt="">
                     <h4 class="ml-5">Lorenzo</h4>
                 </div>
-                <hr>
-                <div class="p-10 d-flex ">
+                <div class="contact-hr"></div>
+                <div class="p-15 contact-item d-flex ">
                     <img class="avatar-img mr-5" src="img/avatar_5.jpg" alt="">
                     <h4 class="ml-5">Damiano</h4>
                 </div>
-                <hr>
-                <div class="p-10 d-flex ">
+                <div class="contact-hr"></div>
+                <div class="p-15 contact-item d-flex ">
                     <img class="avatar-img mr-5" src="img/avatar_6.jpg" alt="">
                     <h4 class="ml-5">Valentina</h4>
                 </div>              
@@ -81,6 +81,8 @@
 
         <!-- sezione dx -->
         <section class="contenitor-dx f-right">
+
+            <!-- sezione header -->
             <div class="dati-chat-contatto d-flex justify-between">
                 <div class="p-14 user-item d-flex align-center ">
                     <div>
@@ -92,26 +94,33 @@
                     </div>                    
                 </div>
                 <div class="header-icon p-14 align-center justify-end">
-                    <i class="fas fa-search m-10"></i>
-                    <i class="fas fa-paperclip m-10"></i>
-                    <i class="fas fa-ellipsis-v m-10"></i>                 
+                    <i class="fas fa-search m-10 icone-grigio-chiaro"></i>
+                    <i class="fas fa-paperclip m-10 icone-grigio-chiaro"></i>
+                    <i class="fas fa-ellipsis-v m-10 icone-grigio-chiaro"></i>                 
                 </div>
             </div>
+
+            <!-- sezione display chat -->
             <div class="area-messaggi-chat">
 
             </div>
 
-            <div class="tastiera">
-
+            <!-- sezione tastiera -->
+            <div class="tastiera-contenent d-flex justify-between">
+                <div class="icon-tastiera p-10 d-flex flex-center">
+                    <i class="far fa-smile icone-grigio-scuro"></i>
+                </div>
+                <div class="input-text-chat p-10">
+                    <input type="text" placeholder="Scrivi un messaggio" v-model="" class="area-tastiera p-10">
+                </div>   
+                <div class="icon-tastiera p-10 d-flex flex-center">
+                    <i class="fas fa-microphone icone-grigio-scuro"></i>
+                </div>
             </div>
 
-        </section>
-        
-
-
-
-
+        </section>     
     </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
