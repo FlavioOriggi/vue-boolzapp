@@ -12,18 +12,24 @@
 <body>
 
     <div class="container clearfix">
+
+        <!-- sezione sx -->
         <section class="contenitor-sx f-left">
+
+            <!-- sezione user -->
             <div class="user-box p-5 d-flex justify-between">
                 <div class="p-14 user-item d-flex align-center ">
                     <img class="avatar-img mr-5" src="img/avatar_1.jpg" alt="">
                     <h3 class="">Nome Utente</h3>
                 </div>
-                <div class="user-icon p-14 d-flex align-center justify-end">
+                <div class="header-icon p-14 d-flex align-center justify-end">
                     <i class="fas fa-circle-notch m-10"></i>
                     <i class="fas fa-comment-alt m-10"></i>
                     <i class="fas fa-ellipsis-v m-10"></i>
                 </div>
             </div>
+
+            <!-- sezione notifiche -->
             <div class="notifiche p-10 d-flex align-center">
                 <div class="icon-notifiche text-center">
                     <i class="fas fa-bell-slash"></i>
@@ -33,6 +39,8 @@
                     <p class="color-text-gray">Attiva notifiche desktop</p>
                 </div>             
             </div>
+
+            <!-- sezione search -->
             <div class="search d-flex align-center">
                 <div class="icon-search pl-10" >
                     <button class="border-none"><i class="fas fa-search"></i></button>
@@ -41,6 +49,8 @@
                     <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="" class="area-input">
                 </div>         
             </div>
+
+            <!-- sezione contatti -->
             <div class="contatti-list p-10"> 
                 <div class="p-10 d-flex ">
                     <img class="avatar-img mr-5" src="img/avatar_2.jpg" alt="">
@@ -69,7 +79,31 @@
             </div>
         </section>
 
+        <!-- sezione dx -->
         <section class="contenitor-dx f-right">
+            <div class="dati-chat-contatto d-flex justify-between">
+                <div class="p-14 user-item d-flex align-center ">
+                    <div>
+                        <img class="avatar-img mr-5" src="img/avatar_1.jpg" alt="">
+                    </div>
+                    <div class="ml-20">
+                        <h3 class="">Nome Utente</h3>
+                        <p class="color-text-gray">Ultimo accesso oggi alle</p>
+                    </div>                    
+                </div>
+                <div class="header-icon p-14 align-center justify-end">
+                    <i class="fas fa-search m-10"></i>
+                    <i class="fas fa-paperclip m-10"></i>
+                    <i class="fas fa-ellipsis-v m-10"></i>                 
+                </div>
+            </div>
+            <div class="area-messaggi-chat">
+
+            </div>
+
+            <div class="tastiera">
+
+            </div>
 
         </section>
         
