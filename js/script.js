@@ -50,7 +50,7 @@ const app = new Vue(
                 },
                 {
                     name: 'Lorenzo',
-                    avatar: '_2',
+                    avatar: '_3',
                     visible: true,
                     messages: [
                         {
@@ -71,7 +71,7 @@ const app = new Vue(
                 },
                 {
                     name: 'Damiano',
-                    avatar: '_2',
+                    avatar: '_4',
                     visible: true,
                     messages: [
                         {
@@ -92,7 +92,7 @@ const app = new Vue(
                 },
                 {
                     name: 'Valentina',
-                    avatar: '_2',
+                    avatar: '_5',
                     visible: true,
                     messages: [
                         {
@@ -110,9 +110,9 @@ const app = new Vue(
                             status: 'sent'
                         }
                     ],
-                }
+                }                
             ]
-        }
+        }        
     }
 );
 

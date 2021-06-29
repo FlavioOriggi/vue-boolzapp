@@ -4,122 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boolzap</title>
-    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    
 </head>
 <body>
 
-    <div class="container d-flex">
+    
+        <div id="app" class="container d-flex">
 
-        <!-- sezione sx -->
-        <section class="contenitor-sx f-left">
+            <!-- sezione sx -->
+            <section class="contenitor-sx ">
 
-            <!-- sezione user -->
-            <div class="user-box p-5 d-flex justify-between">
-                <div class="p-14 user-item d-flex align-center ">
-                    <img class="avatar-img mr-5" src="img/avatar_1.jpg" alt="">
-                    <h3 class="">Nome Utente</h3>
-                </div>
-                <div class="header-icon p-14 d-flex align-center justify-end">
-                    <i class="fas fa-circle-notch m-10 icone-grigio-chiaro"></i>
-                    <i class="fas fa-comment-alt m-10 icone-grigio-chiaro"></i>
-                    <i class="fas fa-ellipsis-v m-10 icone-grigio-chiaro"></i>
-                </div>
-            </div>
-
-            <!-- sezione notifiche -->
-            <div class="notifiche p-10 d-flex align-center">
-                <div class="icon-notifiche ">
-                    <i class="fas fa-bell-slash p-10"></i>
-                </div>
-                <div class="ml-10 text-notifiche">
-                    <h3 class="">Ricevi notifiche di nuovi messaggi</h3>
-                    <p class="color-text-gray">Attiva notifiche desktop</p>
-                </div>             
-            </div>
-
-            <!-- sezione search -->
-            <div class="search d-flex align-center">
-                <div class="icon-search pl-10 d-flex justify-end" >
-                    <button class="border-none btn-colonna-sx"><i class="fas fa-search"></i></button>
-                </div>      
-                <div class="input-search pr-10">
-                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="" class="area-input">
-                </div>         
-            </div>
-
-            <!-- sezione contatti -->
-            <div class="contatti-list"> 
-                <div class="p-15 contact-item d-flex ">
-                    <img class="avatar-img mr-5" src="img/avatar_2.jpg" alt="">
-                    <h4 class="ml-5">Michele</h4>
-                </div>                
-                <div class="contact-hr"></div>
-                <div class="p-15 contact-item d-flex ">
-                    <img class="avatar-img mr-5" src="img/avatar_3.jpg" alt="">
-                    <h4 class="ml-5">Francesco</h4>
-                </div>
-                <div class="contact-hr"></div>
-                <div class="p-15 contact-item d-flex ">
-                    <img class="avatar-img mr-5" src="img/avatar_4.jpg" alt="">
-                    <h4 class="ml-5">Lorenzo</h4>
-                </div>
-                <div class="contact-hr"></div>
-                <div class="p-15 contact-item d-flex ">
-                    <img class="avatar-img mr-5" src="img/avatar_5.jpg" alt="">
-                    <h4 class="ml-5">Damiano</h4>
-                </div>
-                <div class="contact-hr"></div>
-                <div class="p-15 contact-item d-flex ">
-                    <img class="avatar-img mr-5" src="img/avatar_6.jpg" alt="">
-                    <h4 class="ml-5">Valentina</h4>
-                </div>              
-            </div>
-        </section>
-
-        <!-- sezione dx -->
-        <section class="contenitor-dx f-right">
-
-            <!-- sezione header -->
-            <div class="dati-chat-contatto d-flex justify-between">
-                <div class="p-14 user-item d-flex align-center ">
-                    <div>
+                <!-- sezione user -->
+                <div class="user-box p-5 d-flex justify-between">
+                    <div class="p-14 user-item d-flex align-center ">
                         <img class="avatar-img mr-5" src="img/avatar_1.jpg" alt="">
-                    </div>
-                    <div class="ml-20">
                         <h3 class="">Nome Utente</h3>
-                        <p class="color-text-gray">Ultimo accesso oggi alle</p>
-                    </div>                    
+                    </div>
+                    <div class="header-icon p-14 d-flex align-center justify-end">
+                        <i class="fas fa-circle-notch m-10 icone-grigio-chiaro"></i>
+                        <i class="fas fa-comment-alt m-10 icone-grigio-chiaro"></i>
+                        <i class="fas fa-ellipsis-v m-10 icone-grigio-chiaro"></i>
+                    </div>
                 </div>
-                <div class="header-icon p-14 align-center justify-end">
-                    <i class="fas fa-search m-10 icone-grigio-chiaro"></i>
-                    <i class="fas fa-paperclip m-10 icone-grigio-chiaro"></i>
-                    <i class="fas fa-ellipsis-v m-10 icone-grigio-chiaro"></i>                 
+
+                <!-- sezione notifiche -->
+                <div class="notifiche p-10 d-flex align-center">
+                    <div class="icon-notifiche ">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div class="ml-10 text-notifiche">
+                        <h3 class="">Ricevi notifiche di nuovi messaggi</h3>
+                        <p class="color-text-gray">Attiva notifiche desktop</p>
+                    </div>             
                 </div>
-            </div>
 
-            <!-- sezione display chat -->
-            <div class="area-messaggi-chat">
-
-            </div>
-
-            <!-- sezione tastiera -->
-            <div class="tastiera-contenent d-flex justify-between">
-                <div class="icon-tastiera p-10 d-flex flex-center">
-                    <i class="far fa-smile icone-grigio-scuro"></i>
+                <!-- sezione search -->
+                <div class="search d-flex align-center">
+                    <div class="icon-search pl-10 d-flex justify-end" >
+                        <button class="border-none btn-colonna-sx"><i class="fas fa-search"></i></button>
+                    </div>      
+                    <div class="input-search pr-10">
+                        <input type="search" placeholder="Cerca o inizia una nuova chat"  class="area-input">
+                    </div>         
                 </div>
-                <div class="input-text-chat p-10">
-                    <input type="text" placeholder="Scrivi un messaggio" v-model="" class="area-tastiera p-10">
-                </div>   
-                <div class="icon-tastiera p-10 d-flex flex-center">
-                    <i class="fas fa-microphone icone-grigio-scuro"></i>
-                </div>
-            </div>
 
-        </section>     
-    </div>
+                <!-- sezione contatti -->
+                <div class="contatti-list" > 
+                    <div class="contact-item d-flex" v-for="contact in contacts">  
+                        <img :src="'img/avatar' + contact.avatar + '.jpg'"  class="avatar-img mr-5">                    
+                        <h4 class="ml-5">{{contacts.name}}</h4>                 
+                    </div>                       
+                </div>
+            </section>
+
+
+
+
+            <!-- sezione DX -->
+            <section class="contenitor-dx ">
+
+                <!-- sezione header -->
+                <div class="dati-chat-contatto d-flex justify-between">
+                    <div class="p-14 user-item d-flex align-center ">
+                        <div>
+                            <img class="avatar-img mr-5" src="img/avatar_1.jpg" alt="">
+                        </div>
+                        <div class="ml-20">
+                            <h3 class="">Nome Utente</h3>
+                            <p class="color-text-gray">Ultimo accesso oggi alle</p>
+                        </div>                    
+                    </div>
+                    <div class="header-icon p-14 align-center justify-end">
+                        <i class="fas fa-search m-10 icone-grigio-chiaro"></i>
+                        <i class="fas fa-paperclip m-10 icone-grigio-chiaro"></i>
+                        <i class="fas fa-ellipsis-v m-10 icone-grigio-chiaro"></i>                 
+                    </div>
+                </div>
+
+                <!-- sezione display chat -->
+                <div class="area-messaggi-chat">
+                    <div class="container-area-messaggi">
+                        <div class="messaggio-item d-flex justify-end">
+                            <div class="inviato d-flex align-center flex-column "> 
+                                <div>{{sent}} blabla</div>
+                                <div class="date"> {{date}}  </div>                       
+                            </div>
+                        </div>
+                        <div class="messaggio-item d-flex justify-start">
+                            <div class="ricevuto d-flex align-center  flex-column">
+                                <div>{{received}} oopla opla opla</div>
+                                <div class="date"> {{date}}  </div>                       
+                            </div>  
+                        </div>                         
+                        <div class="d-flex justify-end">
+                            <div class="inviato d-flex align-center flex-column "> 
+                                <div>{{sent}}blablabla</div>
+                                <div class="date"> {{date}}  </div>                       
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sezione tastiera -->
+                <div class="tastiera-contenent d-flex justify-between">
+                    <div class="icon-tastiera p-10 d-flex flex-center">
+                        <i class="far fa-smile icone-grigio-scuro"></i>
+                    </div>
+                    <div class="input-text-chat p-10">
+                        <input type="text" placeholder="Scrivi un messaggio"  class="area-tastiera p-10">
+                    </div>   
+                    <div class="icon-tastiera p-10 d-flex flex-center">
+                        <i class="fas fa-microphone icone-grigio-scuro"></i>
+                    </div>
+                </div>
+
+            </section>     
+        </div>
+    
+
 
     <script src="js/script.js"></script>
 </body>

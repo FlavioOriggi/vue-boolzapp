@@ -36,15 +36,25 @@ body{
     color: #b1b1b1;
 }
 
-/* .border-none{
-    border: none;
-} */
+.inviato{
+    background-color: rgb(164, 218, 120);
+    width: 50%;
+}
+.ricevuto{
+    background-color: rgb(190, 188, 188);
+    width: 50%;
+}
+
+
 
 
 /* —————————————— Flex alignments —————————————— */
 .d-flex{display: flex;}
 
 .flex-center{align-items: center; justify-content: center;}
+
+.flex-wrap{flex-wrap: wrap;} .flex-column{flex-direction: column;}
+
 
 .justify-start{justify-content: flex-start;}
 .justify-end{justify-content: flex-end;}
@@ -191,6 +201,13 @@ body{
     background-image: url('../img/mine.jpg');
     background-size: cover;
     overflow-y: scroll;
+}
+
+.container-area-messaggi{
+    margin: 5% auto;
+    width: 75%;
+    height: 100%;
+    background-color: #532853;    
 }
 
 /* sezione tastiera */
