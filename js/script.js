@@ -132,7 +132,8 @@ const app = new Vue(
                 
                 if (this.text) {                    
 
-                    this.contacts[this.contactActive].messages.push({ text: this.text, status: 'sent'});
+                    this.contacts[this.contactActive].messages.push({text: this.text, status: 'sent'});
+                    
                     
                     setTimeout(function(){
                         app.contacts[app.contactActive].messages.push({text:"Ok", status: 'received'})
@@ -143,7 +144,7 @@ const app = new Vue(
             },
 
             searchInList(){
-                this.contacts.filter(contacts => contacts.name.toLowerCase().includes(this.search.toLowerCase()));
+                this.contacts.filter(element => element.name.toLowerCase().includes(this.search.toLowerCase()));
                 
             }
         },  

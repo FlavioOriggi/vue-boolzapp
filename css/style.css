@@ -195,34 +195,38 @@ body{
     background-image: url('../img/mine.jpg');
     background-size: cover;
     overflow-y: scroll;
-    padding: 50px 100px;    
+    padding: 50px 100px;   
+    display: flex; 
+    flex-direction: column; 
 }
 
 .messagge{    
     margin: 10px 0;
-    display: flex; 
 }   
 
 .message-sent{
-    justify-content:flex-end;
+    /* justify-content:flex-end; */
 }
 
 .message-received{
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
 }
 
 .sent, .received{
-    max-width: 40%;
+    max-width: 70%;
     padding: 10px;
-    border-radius: 5px;    
+    border-radius: 5px; 
+    word-wrap: break-word;  
 }
 
 .sent{
-    background-color: rgb(164, 218, 120); 
+    background-color: rgb(164, 218, 120);
+    align-self: flex-end; 
           
 }
 .received{
-    background-color: rgb(190, 188, 188);    
+    background-color: rgb(190, 188, 188); 
+    align-self: flex-start;   
 }
 
 /* sezione tastiera */
