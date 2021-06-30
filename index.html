@@ -17,14 +17,14 @@
     
         <div id="app" class="container d-flex">
 
-            <!-- sezione sx -->
+            <!-- sezione SX -->
             <section class="contenitor-sx ">
 
                 <!-- sezione user -->
                 <div class="user-box p-5 d-flex justify-between">
                     <div class="p-14 user-item d-flex align-center ">
-                        <img class="avatar-img mr-5" src="img/avatar_1.jpg" alt="">
-                        <h3 class="">Nome Utente</h3>
+                        <img class="avatar-img mr-5" :src="'img/avatar' + user.avatar + '.jpg'" alt="">
+                        <h3 class="">{{user.name}}</h3>
                     </div>
                     <div class="header-icon p-14 d-flex align-center justify-end">
                         <i class="fas fa-circle-notch m-10 icone-grigio-chiaro"></i>
@@ -56,15 +56,12 @@
 
                 <!-- sezione contatti -->
                 <div class="contatti-list" > 
-                    <div class="contact-item d-flex" v-for="contact in contacts">  
+                    <div class="contact-item d-flex p-15" v-for="(contact, index) in contacts" @click="setContactActive(index)">  
                         <img :src="'img/avatar' + contact.avatar + '.jpg'"  class="avatar-img mr-5">                    
-                        <h4 class="ml-5">{{contacts.name}}</h4>                 
+                        <h4 class="ml-5">{{contact.name}}</h4>                 
                     </div>                       
                 </div>
             </section>
-
-
-
 
             <!-- sezione DX -->
             <section class="contenitor-dx ">
@@ -73,10 +70,10 @@
                 <div class="dati-chat-contatto d-flex justify-between">
                     <div class="p-14 user-item d-flex align-center ">
                         <div>
-                            <img class="avatar-img mr-5" src="img/avatar_1.jpg" alt="">
+                            <img :src="'img/avatar' + contacts[contactActive].avatar + '.jpg'" class="avatar-img mr-5" :alt="contacts[contactActive].name">
                         </div>
-                        <div class="ml-20">
-                            <h3 class="">Nome Utente</h3>
+                        <div id="user-container" class="ml-20">
+                            <h3 class="">{{contacts[contactActive].name}}</h3>
                             <p class="color-text-gray">Ultimo accesso oggi alle</p>
                         </div>                    
                     </div>
@@ -88,31 +85,15 @@
                 </div>
 
                 <!-- sezione display chat -->
-                <div class="area-messaggi-chat">
-                    <div class="container-area-messaggi">
-                        <div class="messaggio-item d-flex justify-end">
-                            <div class="inviato d-flex align-center flex-column "> 
-                                <div>{{sent}} blabla</div>
-                                <div class="date"> {{date}}  </div>                       
-                            </div>
-                        </div>
-                        <div class="messaggio-item d-flex justify-start">
-                            <div class="ricevuto d-flex align-center  flex-column">
-                                <div>{{received}} oopla opla opla</div>
-                                <div class="date"> {{date}}  </div>                       
-                            </div>  
-                        </div>                         
-                        <div class="d-flex justify-end">
-                            <div class="inviato d-flex align-center flex-column "> 
-                                <div>{{sent}}blablabla</div>
-                                <div class="date"> {{date}}  </div>                       
-                            </div>
-                        </div>
-                    </div>
+                <div class="area-messaggi-chat">                    
+                    <div class="messagge" v-for="message in contacts[contactActive].messages" :class="message.status">
+                        <span class="message.status">{{message.text}}</span>
+                        <span class="orario-messaggio">{{message.data}}</span>                            
+                    </div>                  
                 </div>
 
                 <!-- sezione tastiera -->
-                <div class="tastiera-contenent d-flex justify-between">
+                <div class="tastiera-contenent  d-flex justify-between">
                     <div class="icon-tastiera p-10 d-flex flex-center">
                         <i class="far fa-smile icone-grigio-scuro"></i>
                     </div>

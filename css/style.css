@@ -13,14 +13,14 @@ body{
 .container{
     margin: 5% auto;
     width: 75%;
-    height: 700px;
+    height: 800px;
     background-color: #eae8ea;
     border-radius: 5px;
 }
 
 /* —————————————— Common —————————————— */
 .avatar-img{
-    width: 50px;
+    width: 50px;    
     border-radius: 50%;
 }
 .icone-grigio-chiaro{
@@ -35,17 +35,6 @@ body{
 .color-text-gray{
     color: #b1b1b1;
 }
-
-.inviato{
-    background-color: rgb(164, 218, 120);
-    width: 50%;
-}
-.ricevuto{
-    background-color: rgb(190, 188, 188);
-    width: 50%;
-}
-
-
 
 
 /* —————————————— Flex alignments —————————————— */
@@ -91,6 +80,11 @@ body{
 .ml-5{margin-left:5px;} .ml-10{margin-left:10px;} .ml-20{margin-left:10px;} 
 
 .mr-5{margin-right:5px;}
+
+/* —————————————— Positions —————————————— */
+
+.prelative{ position:relative;} .pabsolute{ position:absolute;} .pfixed{ position:fixed;}
+
 
 
 /* --- SEZIONE PRINCIPALE --- */
@@ -146,23 +140,19 @@ body{
 .btn-colonna-sx{
     background-color:#fafafa;     
 }
-
 .icon-search{
     width: 10%;
     background-color:#fafafa;    
 }
-
 .search > .fa-search{
     width: 10%;
     color: #b1b1b1;
 
 }
-
 .input-search{
     width: 90%;
     background-color:#fafafa;
 }
-
 .area-input{
     width: 100%;
     height: 100%;
@@ -170,12 +160,17 @@ body{
 
 /* sezione contatti */
 .contatti-list{
-    height: 470px;
+    height: calc(100% - 80px - 100px - 50px);    
     width: 100%;
     overflow-y: scroll;
     background-color: white;
 }
 
+.contact-item{
+    height: 80px;
+    width: 100%;
+    cursor: pointer;
+}
 .contact-hr{    
     background-color: #eaeaea;   
     height: 1px;
@@ -197,24 +192,45 @@ body{
 
 /* sezione display chat */
 .area-messaggi-chat{
-    height: 540px;
+    height: calc(100% - 80px - 80px);
     background-image: url('../img/mine.jpg');
     background-size: cover;
     overflow-y: scroll;
+    padding: 50px 100px;
 }
 
-.container-area-messaggi{
-    margin: 5% auto;
-    width: 75%;
-    height: 100%;
-    background-color: #532853;    
+.messagge{    
+    margin: 10px 0;
+    display: flex;     
+}   
+
+.message-sent{
+    justify-content:flex-end;
+}
+
+.message-received{
+    justify-content: flex-start;
+}
+
+.sent, .received{
+    max-width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sent{
+    background-color: rgb(164, 218, 120);       
+}
+.received{
+    background-color: rgb(190, 188, 188);    
 }
 
 /* sezione tastiera */
 .tastiera-contenent{
-    min-height: 80px;
+    height: 80px;
     width: 100%;
     background-color: #eaeaea;
+    
 }
 
 .icone-grigio-scuro{
