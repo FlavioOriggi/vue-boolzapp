@@ -165,7 +165,6 @@ body{
     overflow-y: scroll;
     background-color: white;
 }
-
 .contact-item{
     height: 80px;
     width: 100%;
@@ -176,7 +175,7 @@ body{
     height: 1px;
 }
 
-/* sezione DX */
+/* SEZIONE DX */
 .contenitor-dx{
     float: right;
     height: 100%;
@@ -196,12 +195,12 @@ body{
     background-image: url('../img/mine.jpg');
     background-size: cover;
     overflow-y: scroll;
-    padding: 50px 100px;
+    padding: 50px 100px;    
 }
 
 .messagge{    
     margin: 10px 0;
-    display: flex;     
+    display: flex; 
 }   
 
 .message-sent{
@@ -215,11 +214,12 @@ body{
 .sent, .received{
     max-width: 40%;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 5px;    
 }
 
 .sent{
-    background-color: rgb(164, 218, 120);       
+    background-color: rgb(164, 218, 120); 
+          
 }
 .received{
     background-color: rgb(190, 188, 188);    

@@ -8,6 +8,7 @@ const app = new Vue(
             },
             contactActive: 0,
             text : "",
+            search : "",
             contacts:[
                 {
                     name: 'Michele',
@@ -126,20 +127,29 @@ const app = new Vue(
                 this.contactActive = indice;
                 console.log(this.contactActive);
             },
+            
             sentMessage(){
                 
-                if (this.text) {
+                if (this.text) {                    
 
-                    this.contacts[this.contactActive].messages.push({text: this.text, status: 'sent', active : false});
+                    this.contacts[this.contactActive].messages.push({ text: this.text, status: 'sent'});
                     
                     setTimeout(function(){
-                        app.contacts[app.contactActive].messages.push({text:"Ok", status: 'received', active : false})
+                        app.contacts[app.contactActive].messages.push({text:"Ok", status: 'received'})
                     }, 2000);
                 }
 
                 this.text = ""
             },
-        },   
+
+            searchInList(){
+                this.contacts.filter(contacts => contacts.name.toLowerCase().includes(this.search.toLowerCase()));
+                
+            }
+        },  
+        
+        
+         
         
 
 
