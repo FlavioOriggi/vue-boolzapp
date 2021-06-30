@@ -7,6 +7,7 @@ const app = new Vue(
                 avatar: '_io'
             },
             contactActive: 0,
+            text : "",
             contacts:[
                 {
                     name: 'Michele',
@@ -124,8 +125,22 @@ const app = new Vue(
             setContactActive(indice){
                 this.contactActive = indice;
                 console.log(this.contactActive);
-            }
+            },
+            sentMessage(){
+                
+                if (this.text) {
+
+                    this.contacts[this.contactActive].messages.push({text: this.text, status: 'sent', active : false});
+                    
+                    setTimeout(function(){
+                        app.contacts[app.contactActive].messages.push({text:"Ok", status: 'received', active : false})
+                    }, 2000);
+                }
+
+                this.text = ""
+            },
         },   
+        
 
 
     }

@@ -98,7 +98,7 @@
                         <i class="far fa-smile icone-grigio-scuro"></i>
                     </div>
                     <div class="input-text-chat p-10">
-                        <input type="text" placeholder="Scrivi un messaggio"  class="area-tastiera p-10">
+                        <input type="text" @keyup.enter="sentMessage()" name="input-message" id="input-message" v-model="text" placeholder="Scrivi un messaggio"  class="area-tastiera p-10">
                     </div>   
                     <div class="icon-tastiera p-10 d-flex flex-center">
                         <i class="fas fa-microphone icone-grigio-scuro"></i>
