@@ -12,6 +12,7 @@ const app = new Vue(
             contacts:[
                 {
                     name: 'Michele',
+                    lastAccess: '16:16',
                     avatar: '_1',
                     visible: true,
                     messages:[
@@ -34,6 +35,7 @@ const app = new Vue(
                 },
                 {
                     name: 'Fabio',
+                    lastAccess: '23:36',
                     avatar: '_2',
                     visible: true,
                     messages:[
@@ -56,6 +58,7 @@ const app = new Vue(
                 },
                 {
                     name: 'Lorenzo',
+                    lastAccess: '12:36',
                     avatar: '_3',
                     visible: true,
                     messages:[
@@ -78,6 +81,7 @@ const app = new Vue(
                 },
                 {
                     name: 'Damiano',
+                    lastAccess: '20:36',
                     avatar: '_4',
                     visible: true,
                     messages:[
@@ -100,6 +104,7 @@ const app = new Vue(
                 },
                 {
                     name: 'Valentina',
+                    lastAccess: '18:50',
                     avatar: '_5',
                     visible: true,
                     messages:[
@@ -132,11 +137,22 @@ const app = new Vue(
                 
                 if (this.text) {                    
 
-                    this.contacts[this.contactActive].messages.push({text: this.text, status: 'sent'});
-                    
+                    this.contacts[this.contactActive].messages.push(
+                        {
+                            date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                            text: this.text, 
+                            status: 'sent'
+                        }
+                    );                    
                     
                     setTimeout(function(){
-                        app.contacts[app.contactActive].messages.push({text:"Ok", status: 'received'})
+                        app.contacts[app.contactActive].messages.push(
+                            {
+                                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
+                                text:"Ok", 
+                                status: 'received'
+                            }
+                        )
                     }, 2000);
                 }
 
