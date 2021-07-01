@@ -8,8 +8,8 @@ const app = new Vue(
             },
             contactActive: 0,
             text: "",  
-            filtro: "",          
-            // find: "",
+            filtro: "",        
+            
             contacts:[
                 {
                     name: 'Michele',
@@ -166,7 +166,7 @@ const app = new Vue(
                         app.contacts[app.contactActive].messages.push(
                             {
                                 date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
-                                text:"Ok", 
+                                text: this.arr[Math.floor(Math.random() * this.answers.length)], 
                                 status: 'received'                                
                             }
                         )
@@ -177,17 +177,17 @@ const app = new Vue(
                 this.text = ""
             },
             
-            deleteMessage(message, index){
-                this.contacts[this.contactActive].messages.splice(index,1);
-                
+            deleteMessage(index){
+                this.contacts[this.contactActive].messages.splice(index,1);                
             }, 
+            
             filterList() {
                 this.contacts.forEach(element => {
-                    let nameLow = element.name.toLowerCase();
-                    let filtroLow = this.filtro.toLowerCase();
-                    if(nameLow.includes(filtroLow) == true){
-                        element.visible = true;
-                    } else {
+                    let findName = element.name.toLowerCase();                    
+                    let LowerLetter = this.filtro.toLowerCase();
+                    if(findName.includes(LowerLetter) == true){
+                        element.visible = true;                                   
+                    }else {
                         element.visible = false;
                     }
                 });

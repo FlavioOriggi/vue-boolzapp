@@ -208,6 +208,8 @@ body{
     border-radius: 5px; 
     word-wrap: break-word;  
     box-shadow: 2px 2px rgba(165, 165, 165, 0.7);
+    position: relative;
+
 }
 .sent{
     background-color: rgb(164, 218, 120);
@@ -238,18 +240,12 @@ body{
     font-size: 0.75rem;    
     cursor: pointer;
 }
-
-
 .menu-drop-down{    
+    position: absolute;
+    left: 100px;
     max-width: 180px;
-    border-radius: 5px;
-    box-shadow: 2px 2px rgba(165, 165, 165, 0.7);
-}
-.active{
-    display: inline-block;
-    position: relative;
-    bottom: 2px;
-    background-color: white;
+    border-radius: 3px;
+    box-shadow: 2px 2px rgba(143, 143, 143, 0.7);    
 }
 .menu-drop-down ul{
     list-style: none;
@@ -260,11 +256,12 @@ body{
     width: 100%;    
     cursor: pointer;
     background-color: rgb(206, 204, 204);
-    font-size: 1rem;    
+    font-size: 1rem; 
+    border-radius: 3px;   
 }
-
-
-
+.menu-drop-down li:hover{   
+    background-color: rgb(165, 165, 165);         
+}
 
 /* sezione tastiera */
 .tastiera-contenent{
