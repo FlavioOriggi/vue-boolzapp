@@ -91,10 +91,18 @@
             <div class="area-messaggi-chat">                    
                 <div class="messagge" v-for="message in contacts[contactActive].messages" :class="message.status">
                     <span class="message.status">{{message.text}}</span>
+                    <span class="option-message" ><i class="fas fa-chevron-down"></i></span>                
                     <div class="item-date">
                         <p class="message.status">{{message.date}}<span class="fleg-read">{{message.fleg}}</span></p> 
                     </div>
-                                            
+                    <div class="menu-drop-down" :class="{active : message.active}">
+                        <ul>
+                            <li>Rispondi</li>
+                            <li>Inoltra messsaggio</li>
+                            <li>Messaggio importante</li>
+                            <li @click="deleteMessage(message, index)">Elimina Messaggio</li>
+                        </ul>
+                    </div>                                                          
                 </div>                  
             </div>
 

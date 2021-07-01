@@ -175,6 +175,11 @@ const app = new Vue(
                 }
 
                 this.text = ""
+            },
+            
+            deleteMessage(message, index){
+                this.contacts[this.contactActive].messages.splice(index,1);
+                
             }, 
             filterList() {
                 this.contacts.forEach(element => {
@@ -187,14 +192,9 @@ const app = new Vue(
                     }
                 });
             },
+            
 
         },  
-        // computed: {
-        //     filterList() {
-        //       return this.contacts.filter(contact => {
-        //         return contact.name.toLowerCase().includes(this.find.toLowerCase())
-        //       })
-        //     }            
-        // }   
+          
     }
 );

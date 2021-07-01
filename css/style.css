@@ -162,12 +162,9 @@ body{
     cursor: pointer;
     border-top: 1px solid rgb(245, 245, 245);
 }
-
 .contact-item:hover{
     background-color: rgb(245, 245, 245);
 }
-
-
 .contact-hr{    
     background-color: #eaeaea;   
     height: 1px;
@@ -210,13 +207,14 @@ body{
     padding: 10px;
     border-radius: 5px; 
     word-wrap: break-word;  
+    box-shadow: 2px 2px rgba(165, 165, 165, 0.7);
 }
 .sent{
     background-color: rgb(164, 218, 120);
     align-self: flex-end;           
 }
 .received{
-    background-color: rgb(190, 188, 188); 
+    background-color: rgb(236, 236, 236); 
     align-self: flex-start;   
 }
 .item-date > p{
@@ -225,7 +223,6 @@ body{
     display: flex; 
     justify-content: end;   
 }
-
 .fleg-read{
     font-size:0.75rem; 
     color: #57c6f4;    
@@ -234,10 +231,40 @@ body{
     bottom: 2px;
     letter-spacing:0rem
 }
-
-.red{
-    color: red;
+.option-message{
+    width: 20px;
+    margin-left: 10px;
+    color:rgb(165, 165, 165);
+    font-size: 0.75rem;    
+    cursor: pointer;
 }
+
+
+.menu-drop-down{    
+    max-width: 180px;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(165, 165, 165, 0.7);
+}
+.active{
+    display: inline-block;
+    position: relative;
+    bottom: 2px;
+    background-color: white;
+}
+.menu-drop-down ul{
+    list-style: none;
+    width: 100%;
+}
+.menu-drop-down li{
+    padding: 10px;
+    width: 100%;    
+    cursor: pointer;
+    background-color: rgb(206, 204, 204);
+    font-size: 1rem;    
+}
+
+
+
 
 /* sezione tastiera */
 .tastiera-contenent{
