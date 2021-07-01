@@ -7,8 +7,8 @@ const app = new Vue(
                 avatar: '_io'
             },
             contactActive: 0,
-            text : "",
-            search : "",
+            text: "",            
+            find: "",
             contacts:[
                 {
                     name: 'Michele',
@@ -157,18 +157,14 @@ const app = new Vue(
                 }
 
                 this.text = ""
-            },
-
-            searchInList(){
-                this.contacts.filter(element => element.name.toLowerCase().includes(this.search.toLowerCase()));
-                
-            }
+            }               
         },  
-        
-        
-         
-        
-
-
+        computed: {
+            filteredList() {
+              return this.contacts.filter(contact => {
+                return contact.name.toLowerCase().includes(this.find.toLowerCase())
+              })
+            }
+        }   
     }
 );

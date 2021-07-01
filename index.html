@@ -49,16 +49,17 @@
             <!-- sezione search -->
             <div class="search d-flex align-center">
                 <div class="icon-search pl-10 d-flex justify-end" >
-                    <button class="border-none btn-colonna-sx" ><i class="fas fa-search"></i></button>
+                    <button class="border-none btn-colonna-sx" for="find" ><i class="fas fa-search"></i></button>
                 </div>      
-                <div class="input-search pr-10">
-                    <input type="search" name="search" id="search" v-model="searchInList" placeholder="Cerca o inizia una nuova chat"  class="area-input">
+                <div id="search" class="input-search pr-10">
+                    <input type="text" v-model="find" class="area-input" placeholder="Cerca o inizia una nuova chat">
                 </div>         
             </div>
 
             <!-- sezione contatti -->
-            <div class="contatti-list" > 
-                <div class="contact-item d-flex p-15" v-for="(contact, index) in contacts" @click="setContactActive(index)">  
+            <div class="contatti-list" >                 
+                <div class="contact-item d-flex p-15" v-for="contact in filteredList" @click="setContactActive(contact) ">  
+                    
                     <img :src="'img/avatar' + contact.avatar + '.jpg'"  class="avatar-img mr-5">                    
                     <h4 class="ml-5">{{contact.name}}</h4>                 
                 </div>                       

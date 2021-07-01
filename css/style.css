@@ -196,7 +196,7 @@ body{
     margin: 15px 0;
 } 
 .messagge, span{
-    font-size:1.75rem;
+    font-size:1.6rem;
 }
 .sent, .received{
     max-width: 70%;
