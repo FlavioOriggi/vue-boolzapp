@@ -9,7 +9,7 @@ const app = new Vue(
             contactActive: 0,
             text: "",  
             filtro: "",        
-            
+            answers:['grazie', 'si, va benissimo!', 'no', 'non posso, mi spiace', 'si, è una bellissima giornata!'],
             contacts:[
                 {
                     name: 'Michele',
@@ -162,15 +162,15 @@ const app = new Vue(
                         }
                     );                    
                     
-                    setTimeout(function(){
+                    const answerRandom = this.answers[Math.floor(Math.random() * this.answers.length)];
+                    setTimeout(function(){                        
                         app.contacts[app.contactActive].messages.push(
                             {
-                                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),
-                                text: this.arr[Math.floor(Math.random() * this.answers.length)], 
+                                date: dayjs().format("DD/MM/YYYY HH:mm:ss"),                                 
+                                text: answerRandom,                                
                                 status: 'received'                                
                             }
-                        )
-                        
+                        )                        
                     }, 2000);
                 }
 

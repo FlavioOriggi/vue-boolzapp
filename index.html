@@ -91,8 +91,15 @@
             <!-- sezione display chat -->
             <div class="area-messaggi-chat">                    
                 <div class="messagge" v-for="message in contacts[contactActive].messages" :class="message.status">
-                    <span class="message.status">{{message.text}}</span>
-                    <span class="option-message" ><i class="fas fa-chevron-down"></i></span>                
+                    <div class="d-flex">
+                        <div class="message-item">
+                            <span class="message.status">{{message.text}}</span>
+                        </div>
+                        <div>
+                            <span class="option-message" ><i class="fas fa-chevron-down"></i></span>
+                        </div>                       
+                    </div>
+                                  
                     <div class="item-date">
                         <p class="message.status">{{message.date}}<span class="fleg-read">{{message.fleg}}</span></p> 
                     </div>
